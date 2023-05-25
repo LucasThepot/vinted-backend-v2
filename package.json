@@ -1,0 +1,22 @@
+{
+  "name": "vinted-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "cloudinary": "^1.37.0",
+    "crypto-js": "^4.1.1",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "git": "^0.1.5",
+    "mongoose": "^7.2.1",
+    "uid2": "^1.0.0"
+  }
+}
