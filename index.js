@@ -7,6 +7,6 @@ const userRoutes = require("./routes/user");
 app.use(userRoutes);
 const offerRoutes = require("./routes/offer");
 app.use(offerRoutes);
-const cloudinary = require("cloudinary").v2;
+
 require("dotenv").config();
 app.listen(3000, () => console.log("Server started"));

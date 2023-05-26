@@ -3,6 +3,7 @@ const Offer = require("../models/Offer");
 
 const isAuthenticated = async (req, res, next) => {
   if (req.headers.authorization) {
+    console.log(req.headers);
     const user = await User.findOne({
       token: req.headers.authorization.replace("Bearer ", ""),
     });

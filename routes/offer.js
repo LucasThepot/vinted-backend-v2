@@ -5,7 +5,6 @@ const Offer = require("../models/Offer");
 const isAuthenticated = require("../middlewares/isAuthenticated");
 const fileUpload = require("express-fileupload");
 const cloudinary = require("cloudinary").v2;
-
 cloudinary.config({
   cloud_name: process.env.CLOUD_NAME,
   api_key: process.env.API_KEY,
