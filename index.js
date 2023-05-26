@@ -7,5 +7,5 @@ const userRoutes = require("./routes/user");
 app.use(userRoutes);
 const offerRoutes = require("./routes/offer");
 app.use(offerRoutes);
-
+require("dotenv").config();
 app.listen(process.env.PORT, () => console.log("Server started"));
