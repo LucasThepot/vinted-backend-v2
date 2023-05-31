@@ -34,6 +34,7 @@ router.post("/user/signup", async (req, res) => {
         await newUser.save();
         res.status(201).json({
           _id: newUser._id,
+          email: newUser.email,
           token: newUser.token,
           account: newUser.account,
         });
@@ -57,7 +58,9 @@ router.post("/user/login", async (req, res) => {
         if (hash !== user.hash) {
           res.status(400).json({ message: "wrong credentials" });
         } else {
-          res.status(201).json({ message: "successfully logged in" });
+          res
+            .status(201)
+            .json({ _id: user._id, token: user.token, account: user.account });
         }
       }
     } else {

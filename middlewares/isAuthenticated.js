@@ -6,7 +6,7 @@ const isAuthenticated = async (req, res, next) => {
     console.log(req.headers);
     const user = await User.findOne({
       token: req.headers.authorization.replace("Bearer ", ""),
-    });
+    }).select("account _id");
 
     if (!user) {
       return res.status(401).json({ error: "Unauthorized1" });
